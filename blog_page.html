@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #top_image{
+            position: relative;
+            width: 100%;
+            height:550px ;
+        }
+
+
+        .serch_bar{
+            width:50%;
+            max-width: 400px;
+            height: 20px;
+            background: white;
+           position: absolute;
+            align-items: center;
+            border-radius: 60px;
+            padding: 10px 10px;
+            top: 20px;
+            left: 60%;
+            display: flex;
+            backdrop-filter: blur(4px) saturate(180%);
+        }
+
+        .serch_bar input{
+            background: transparent;
+            flex: 1;
+            outline: none;
+            border: 0;
+            padding: 5px 5px;
+            font-size: 20px;
+            color: black;
+            top: 20px;
+        }
+
+        ::placeholder{
+            color:#cac7ff ;
+        }
+
+
+       
+
+        .serch_bar button{
+            border: 0;
+            border-radius: 50px;
+            width: 50px;
+            height: 20px;
+            cursor: pointer;
+            background-color: white;
+           
+        }
+
+
+        #nav_bar{
+            width: 100%;
+            height: 80px;
+            background-color: #ededfd;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+
+        #nav_bar div{
+
+            justify-content: center;
+            padding-top: 5px;
+            color: #adaaf7;
+        }
+        
+        #nav_bar div:hover{
+
+            color: black;
+            cursor: pointer;
+          
+        
+        }
+
+        #page_images{
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+          
+
+        }
+
+        #page_images div{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 700px;
+            
+            margin: 40px;
+            margin-left: 70px;
+            justify-content: space-around;
+            
+        
+        }
+
+        #page_images div img{
+            width: 90%;
+            height: 65%;
+           
+            margin-left: 50px;
+           
+        }
+
+        #page_images div h2{
+            width: 80%;
+            height: 11%;
+           
+            margin-left: 75px;
+        }
+
+        #page_images div p{
+            width: 80%;
+            height: 11%;
+            
+            margin-left: 75px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main">
+
+
+        <div id="top_image">
+            <img style="width: 100%; height:550px ;border-radius:5px" src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_412,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1655901228163-785a18.jpeg"/>
+            <img style="width: 45%; height:100px ;border-radius:5px; position: absolute; top:40%; left: 400px; z-index: 9;" src="https://blog.urbancompany.com/wp-content/uploads/2022/09/the-urban-life-logo-white-768x187.png"/>
+            <form  action="https://www.google.com/search" method="get" class="serch_bar">
+                <input name="q" type="text" placeholder="Serch">
+                <button type="submit"> <img style="height: 20px; width: 30px;" src="data:image/png;base64,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"></button>
+            </form>
+
+        </div>
+
+
+        <div id="nav_bar">
+            <div>
+                <h2>COMPANY</h2>
+            </div>
+            <div>
+                <h2>CULTURE</h2>
+            </div>
+            <div>
+                <h2>COMMUNITY</h2>
+            </div>
+            <div>
+                <h2>LIFE STYLE</h2>
+            </div>
+        </div>
+
+
+        <div id="page_images">
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2021/12/hs4-512x339-1.jpg">
+                <h2>5 Trending Hairstyles for Long Hair to Try This Shaadi Season</h2>
+                <p>Vicky and Katrina aren’t the only ones smitten this season of love. With invitations piling up in our living rooms, we have to figure out</p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 10, 2021  NO COMMENTS</p>
+            </div>
+
+
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2021/08/thumbnail-finding-the-best-hair-removal-method-512x288-1.jpg">
+                <h2>Which is The Best Hair Removal Method?</h2>
+                <p> When it comes to getting rid of unwanted hair, there are hundreds of good options available. But, have you ever wondered which is the</p>
+                <p style="color: rgb(74, 74, 162);">AUGUST 30, 2021  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2020/08/gettyimages-181879127-1589643370-2048x1365.jpg">
+                <h2>Men’s Hair Colouring: Home or Salon?</h2>
+                <p>If you’ve stepped into your early thirties, chances are those grey hairs are peeking out of your head. Hair colouring is certainly one of the</p>
+                <p style="color: rgb(74, 74, 162);">AUGUST 31, 2020  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2020/08/90426618_154256686052525_1736364692824191085_n.jpg">
+                <h2>Men’s Hairstyles—3 Classics and How to Do Them</h2>
+                <p>Been sporting the casual messy look on your hair for too long? Let us help you get back to looking sharp once again! Here is</p>
+                <p style="color: rgb(74, 74, 162);">AUGUST 27, 2020  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2019/12/aloe-vera-hair-oil-1.jpg">
+                <h2>Aloe Vera Hair Oil : Benefits, How to Make It, Usage & More</h2>
+                <p>Aloe Vera is a wonder plant but does it produce any oil? The answer is no. Aloe vera hair oil is basically created by combining</p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 25, 2019  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2019/12/RICE-WATER-FOR-HAIR-768x512-1.jpg">
+                <h2>Rice Water For Hair : How To Use This Miracle Beauty Fluid!</h2>
+                <p>Rice water is rich in minerals and vitamins which have many benefits for skin and hair. It is rich in amino acids which strengthen hair
+
+                </p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 16, 2019  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2019/12/aloe-vera-for-hair-1.jpg">
+                <h2>Aloe Vera Hair Masks for Growth, Dandruff And Texture</h2>
+                <p>Aloe vera is abundant in vitamins, minerals and other ingredients which are essential for healthy hair.  The combination of these has a soothing, moisturizing, and</p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 13, 2019  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2019/12/Aloe-vera-hair-benefits.jpg">
+                <h2>Benefits of Aloe Vera for Hair: How Does It Help Hair Growth</h2>
+                <p>Aloe Vera is a wonder plant which has several beauty-boosting properties for skin and hair. There are multiple benefits of aloe vera gel for hair</p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 6, 2019  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2019/12/banana-hair-mask-1.jpg">
+                <h2>Banana Hair Mask Ideas For Soft and Shiny Hair</h2>
+                <p>Bananas are rich in magnesium, potassium, protein and vitamins that nourish and soften hair. If you have dry and damaged hair, a banana hair mask</p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 3, 2019  NO COMMENTS</p>
+            </div>
+            <div>
+                <img src="https://blog.urbancompany.com/wp-content/uploads/2019/12/CURD-FOR-HAIR-1-1.jpg">
+                <h2>Curd for Hair : Benefits, Hair Masks & More</h2>
+                <p>Curd has a high content of vitamins, minerals and fatty acids that make it excellent for healthy hair and aid in preventing hair loss. As</p>
+                <p style="color: rgb(74, 74, 162);">DECEMBER 3, 2019  NO COMMENTS</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
