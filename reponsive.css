@@ -1,0 +1,18 @@
+@media all and (max-width:840px){
+   
+    .box{
+        flex-direction: column;
+    }
+    .box-2{
+        width: 100%;
+    }
+    .box1{
+        width: 100%;
+    }
+ }
+@media all and (max-with:400){
+#nav{
+    align-items: center;
+    margin: auto
+}
+}
