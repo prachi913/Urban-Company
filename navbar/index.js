@@ -1,8 +1,11 @@
-let dropcityid=document.getElementById("dropcityid").addEventListener("click",funfun)
+let dropcityid=document.getElementById("dropcityid")
+dropcityid.onclick=function(){
+    funfun()
+}
 
 let dropcityid_dropdown_container=document.getElementById("dropcityid_dropdown-container")
 function funfun(){
- dropcityid_dropdown_container.classList.toggle("dropcityid_dropdown-container")
+ dropcityid_dropdown_container.classList.toggle("container")
 }
 // var i;
 // for (i = 0; i <dropcityid.length; i++) {

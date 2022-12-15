@@ -1,7 +1,17 @@
 body{
  position: relative;
+ text-rendering: optimizeLegibility;
+ font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
 
+div {
+    display: block;
+}
+.HomePageDesktop__root--3vTPR{
+margin-top: 60px;
+    background-color: #f0f0f0;
+  
+}
 #navbar_div{
   height: 60px;
   width: 100%;
@@ -19,7 +29,7 @@ body{
  
  top: 0;
  left: 0;
- z-index: 3;
+ z-index: 4;
 
 }
 #navbar_div>#navbar_div_logo{
@@ -63,17 +73,33 @@ width: 100%;
 text-align: left;
 cursor: pointer;
 outline: none;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
 }
 #dropcityid_dropdown-container{
-display: none;
-background-color: #262626;
-padding-left: 8px;
+
+display: block;
+display: grid;
+
+position: absolute;
+
+width:200px;
+background: #fff;
+
+font-family: Inter,Roboto,sans-serif,Helvetica;
+font-weight: 400;
+ 
+max-height: 0px; 
+  overflow: hidden; 
+ transition: max-hight 0.5s;
+overflow-y: scroll;
 }
-/* .dropcityid_dropdown-container{
-  display: block;
-  height: 400px;
-  width: 400px;
-} */
+#dropcityid_dropdown-container.container{
+    /* opacity:1;
+    visibility: visible; */
+    max-height: 300px;
+    /* overflow-y: scroll; */
+
+} 
 #middiv_whole1{
     background-image: linear-gradient(90deg,#f6f7f8 0,#edeef1 20%,#f6f7f8 40%,#f6f7f8);
    
@@ -82,11 +108,12 @@ padding-left: 8px;
    display: flex;
     
    position: absolute;
-   top:52px;
+   top:0%;
   
  left: 0;
+ margin-bottom: 20px;
    
-    z-index: 0;
+  
 
 }
 #middiv_whole1>#middiv_whole1_img{
@@ -106,11 +133,276 @@ padding-left: 8px;
     color: white;
     height: 100%;
     width: 50%;
+    z-index: 3;
 
 }
 #middiv_whole1>#middiv_whole1_lastdiv>#middiv_whole1_lastdiv_short{
     height: 70%;
     width: 100%;
     align-items:flex-start;
-    
+    margin-top: 50px;
+
 }
+#middiv_whole1_lastdiv_short_p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 5.33px;
+    color: #bdbdbd;
+    text-transform: uppercase;
+}
+#middiv_whole1_lastdiv_short_h1{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #fff;
+    margin: 20px 0 16px
+}
+#middiv_whole1_lastdiv_short_pagain{
+    font-size: 18px;
+    line-height: 1.44;
+    color: #bdbdbd;
+    margin: 0 0 36px;
+}
+#interesting_div_city{
+    /* height: 100px;
+    width: 200px; */
+    background-color: white;
+    width: 300px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 15px 16px;
+}
+#interesting_div_city>p{
+    color: #262626;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #212121;
+    margin-bottom: 16px;
+}
+#midlast_divv{
+    border: 1px solid red;
+   height: 400px;
+    width: 100%;
+  
+    
+    /* justify-content: space-between; */
+   background-color: white;
+    position: absolute;
+   margin-top: 652px;
+}
+#nowthis_div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 60%;
+    width: 100%;
+    margin: auto;
+
+}
+#midlast_divv>#nowthis_div>#firt_div_of_midlast{
+ height: 300px;
+
+}
+#firt_div_of_midlast>h2{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 36px;
+}
+#midlast_divv>.firt_div_of_midlast>#main_Urban_div_sort{
+    display: block;
+   height: 300px;
+   width:100px;
+
+
+}
+#main_Urban_div_sort>.main_Urban_div_sort_little{
+display: flex;
+height: 100px;
+width: 100%;
+
+}
+.main_Urban_div_sort_little_pic{
+ width: 72px;
+ height: 72px;
+ margin-right: 32px;
+
+}
+.main_Urban_div_sort_little_pic>img{
+overflow: hidden;
+width: 100%;
+
+object-fit: cover
+}
+.main_Urban_div_sort_little_para{
+    width:70% ;
+    display: grid;
+    height: 100%;
+
+}
+
+
+
+ #midlast_divv>#firt_div_of_midlast_mid{
+
+    height: 100%;
+    width: 50%;
+    border: 2px solid red;
+    background-color: #000; 
+     z-index: 9;
+    margin-top: 1000px;
+ }
+
+ .QualityAssured__root--3_KsX {
+    border-radius: 8px;
+    background-color: #f5f9ff;
+    padding: 48px;
+}
+.QualityAssured__root--3_KsX .QualityAssured__imgContainer--3UKFc {
+    width: 106px;
+    height: 120px;
+}
+.LazyLoadImage__imageContainer--3EOU_ {
+    position: relative;
+}
+.TemplateShimmer__hidden--1oL9u {
+    opacity: 0;
+    z-index: 0;
+}
+.TemplateShimmer__shimmer--1HNwN {
+    position: absolute;
+    z-index: 3;
+    background: #f6f7f8;
+    background-image: linear-gradient(90deg,#f6f7f8 0,#edeef1 20%,#f6f7f8 40%,#f6f7f8);
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: TemplateShimmer__placeholderShimmer--3ABuG;
+    animation-timing-function: linear;
+}
+.QualityAssured__root--3_KsX .QualityAssured__imgContainer--3UKFc>img {
+    width: 100%;
+    object-fit: cover;
+}
+.QualityAssured__root--3_KsX .QualityAssured__heading--3DL-2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 12px;
+    margin-top: 36px;
+}
+h3 {
+    display: block;
+   
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+   
+}
+.QualityAssured__root--3_KsX .QualityAssured__desc--10wnp {
+    font-size: 18px;
+    line-height: 1.44;
+    color: #757575;
+}
+
+.WhyUrbanCompany__heading--2iWeA {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+}
+.WhyUrbanCompany__desc--1ZAQV {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #757575;
+}
+#finaly_fistabo{
+    position: absolute;
+    margin-top:1136px;
+    width: 1136px;
+   height: 400;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.HomePageDesktop__appImgWrapper--3OvLF{
+    display: flex;
+}
+.LazyLoadImage_oo{
+    width: 240px;
+    margin-left: 56px;
+    height: 100%;
+
+}
+.LazyLoadImage_oo>img{
+    overflow: hidden;
+    width: 100%;
+}
+#AppDownloadSmsEmail_divvv{
+    margin: 40px 0 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 24px;
+    width: 500px;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 8%);
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+.AppDownloadSmsEmail__countryCode--1dgRE {
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.AppDownloadSmsEmail__countryFlag--F7DyQ {
+    width: 23px;
+    height: auto;
+    margin-right: 5px;
+}
+.AppDownloadSmsEmail__inpDiv--1N0Uc .AppDownloadSmsEmail__inpSms--23iHf {
+    border-left: 1px solid #e2e2e2;
+}
+
+.AppDownloadSmsEmail__appLinkCTA--FFDEP {
+    font-size: 12px;
+    padding: 16px 32px;
+    color: #fff;
+    background: #212121;
+    margin-right: 4px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.HomePageDesktop__appLinks--1ZZGc{
+    display: flex;
+
+}
+input {
+    overflow: visible;
+    outline: 0;
+}
+.AppDownloadSmsEmail__inputEl{
+    flex: 1;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    background: #fff;
+    border:none;
+}
+/* #onlyfor_index{
+    z-index: 4;
+    
+} */
