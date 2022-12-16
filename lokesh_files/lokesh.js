@@ -2,8 +2,8 @@
 
 	// })
 	
-	let search_name="Home_Painters";
-	//let search_name=sessionStorage.getItem("abc");
+	//let search_name="Home_Painters";
+	let search_name=sessionStorage.getItem("abc");
 	async function lok(){
 		let res=await fetch(`http://localhost:3000/${search_name}`);
 		let dat=await res.json();
