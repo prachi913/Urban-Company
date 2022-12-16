@@ -7,13 +7,13 @@
     <title>Admin</title>
     <link rel="stylesheet" href="./navbar/navbar.css">
     <style>
-        #ff{
+        #ff,#fy{
             display: flex;
             flex-direction: column;
             width: 25%;
             margin:10px;
         }
-        #ff>*{
+        #ff>*, #fy>*{
             margin: 8px;
             font-size: 18px;
         }
@@ -22,6 +22,10 @@
         }
         .main>div>h1{
             text-align: center;
+        }
+        .worker{
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -37,22 +41,30 @@
         </div>
         <div class="main">
             <div><h1>Hello Admin</h1></div>
-            <div >
+            <div class="worker">
                 <form id="ff" action="">
                     <h2>Add Species</h2>
                     <input type="text" name="Title" placeholder="Title">
                     <select name="fd" id="cat">
                         <option value="">Select category</option>
-                        <option value="Kitchen_Cleaning" name="">Kitchen Cleaning</option>
-                        <option value="Sofa_Cleaning" name="">Sofa Cleaning</option>
                     </select>
                     <input type="Number" name="price" placeholder="Price">
                     <input type="text" name="Image" placeholder="Image url">
                     <input type="text" name="desc1" placeholder="Description 1">
                     <input type="text" name="desc2" placeholder="Description 2">
                     <button id="ad">Add it</button>
+                    <button id="up">Update</button>
+                </form>
+                <form id="fy" action="">
+                    <h2>Delete Species</h2>
+                    <input type="text" name="Title" placeholder="Title">
+                    <select name="fd" id="">
+                        <option value="">Select category</option>
+                    </select>
+                    <button id="del">Delete</button>
                 </form>
             </div>
+            
         </div>
     </div>
 </body>
@@ -62,12 +74,13 @@
     window.addEventListener("load",async ()=>{
         let rest=await fetch(`http://localhost:3000/db`);
         let dft=await rest.json();
+        let arr=[];
         for(let i in dft){
-            let op=document.createElement("option")
-            op.value=`${i}`;
-            op.innerText=`${i.split("_").join(" ")}`;
-            document.querySelector("#cat").append(op);
+          arr.push(`<option value="${i}">${i.split("_").join(" ")}</option>`);
         }
+        let dgf=document.querySelectorAll("#cat");
+        dgf[0].innerHTML=`<option value="">Select category</option>`+arr.join("");
+        dgf[1].innerHTML=`<option value="">Select category</option>`+arr.join("");
     })
     
 
@@ -99,4 +112,63 @@
             alert("Data insertion Successful")
         }
     }
+    document.querySelector("#ff>#up").addEventListener("click",async (e)=>{
+        e.preventDefault();
+        let x=document.querySelectorAll("#ff>input");
+        let y=document.querySelector("#cat");
+        let obj={
+        };
+        for(let i=0;i<x.length;i++){
+            (x[i].value)? obj[x[i].name]=x[i].value:null
+        }
+       ( obj.price)? obj.price=`₹${obj.price}`:null;
+        let cc=y.value;
+        let da=obj;
+       let res=await fetch(`http://localhost:3000/${cc}?Title=${da.Title}`);
+       let exp=await res.json();
+       let da_id=exp[0].id;
+       let respd=await fetch(`http://localhost:3000/${cc}/${da_id}`,{
+        method:"PATCH",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(da)
+       })
+       if(respd.ok){
+        alert("Updated successfully")
+       }
+       else{
+        alert("Data insertion failed")
+       }  
+    })
+    // document.querySelector("#ff>#del").addEventListener("click",async (e)=>{
+    //     e.preventDefault();
+    //     let x=document.querySelectorAll("#fy>input");
+    //     let y=document.querySelector("#cat");
+    //     let obj={
+    //     };
+    //     for(let i=0;i<x.length;i++){
+    //         (x[i].value)? obj[x[i].name]=x[i].value:null
+    //     }
+    //    ( obj.price)? obj.price=`₹${obj.price}`:null;
+    //     let cc=y.value;
+    //     let da=obj;
+    //    let res=await fetch(`http://localhost:3000/${cc}?Title=${da.Title}`);
+    //    let exp=await res.json();
+    //    let da_id=exp[0].id;
+    //    let respd=await fetch(`http://localhost:3000/${cc}/${da_id}`,{
+    //     method:"PATCH",
+    //     headers:{
+    //         "Content-Type":"application/json"
+    //     },
+    //     body:JSON.stringify(da)
+    //    })
+    //    if(respd.ok){
+    //     alert("Updated successfully")
+    //    }
+    //    else{
+    //     alert("Data insertion failed")
+    //    }  
+    // })
+    
 </script>
