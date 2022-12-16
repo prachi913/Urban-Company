@@ -36,7 +36,7 @@
 	}
 	.topper2>video{
 		box-sizing: border-box;
-		border-radius: 10px;
+		object-fit: fill;
 	}
 	.linehr{
 		align-self: center;
@@ -67,6 +67,7 @@
 		width:55%;
 		overflow:hidden;
 		overflow-y: scroll;
+		
 	}
 	.bottom>.m_vertical{
 		width:2px;
@@ -179,6 +180,59 @@
 	.addtocart_div:hover{
 		cursor: pointer;
 	}
+	.final_toal{
+		/* border: 1px solid red; */
+		margin:80px;
+		position:sticky;
+		top: 80%;
+		display:flex;
+		justify-content:space-evenly
+	}
+	.final_toal>span{
+		padding-top: 5%;
+		font-size: 22px;
+	}
+	.final_toal>button{
+		border:none;
+		height: 48px;
+		border-radius: 8px;
+		padding-left: 16px;
+    	padding-right: 16px;
+		margin-left:30px;
+		background-color: rgb(110, 66, 229);
+		color:white;
+		cursor: pointer;
+		font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+	}
+	.coppwer{
+		position:sticky;
+		top:0px;
+		background-color: white;
+		z-index: 1;
+	}
+	.coppwer_bat{
+		display:flex;
+	}
+	.coppwer_sea{
+		display:flex;
+		flex-direction: column;
+		padding-top:35px; 
+		margin-left:30px;
+	}
+	.coppwer_sea>img{
+		height: 60px;
+		width:60px;
+		border-radius: 5px;
+	}
+	.coppwer_sea>span{
+		width:60px;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+	}
+	*{
+		font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	}
 	</style>
 	</head>
 	<body>
@@ -188,14 +242,28 @@
 		<div class="topper1">
 			<span>UC Safe</span>
 			<h1></h1>
+			<p>873 bookings this year in Nilmani Society</p>
 		</div>
 		<div class="topper2">
 			
 		</div>
 	</div>
-	<div>
+	<div class="coppwer">
 		<div class="linehr"></div>
-		<div></div>
+		<div class="coppwer_bat">
+			<div class="coppwer_sea">
+				<img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto,c_limit/images/supply/customer-app-supply/1644987148985-6041ad.png" alt="img">
+				<span>Book by</span>
+			</div>
+			<div class="coppwer_sea">
+				<img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/supply/customer-app-supply/1642525912071-bdb3c7.png" alt="img">
+				<span>Frequently Booked</span>
+			</div>
+			<div class="coppwer_sea">
+				<img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1627621049998-083197.png" alt="img">
+				<span>Service</span>
+			</div>
+		</div>
 		<div class="thin_linehr"></div>
 	</div>
 	<div class="bottom">
@@ -272,17 +340,17 @@
 
 	// })
 	
-	let search_name="Fullhome_Cleaning";
-	sessionStorage.setItem("abc",search_name);
+	let search_name="Home_Painters";
+	//let search_name=sessionStorage.getItem("abc");
 	async function lok(){
 		let res=await fetch(`http://localhost:3000/${search_name}`);
 		let dat=await res.json();
-		document.querySelector(".topper1>h1").innerText=search_name.split("_").join(" ");
+		document.querySelector(".topper1>h1").innerText=`${search_name.split("_").join(" ")}`;
 		if(`./video/${search_name}.webm`){
 				console.log("there")
 		}
 		document.querySelector(".topper2").innerHTML=`
-		<video autoplay height="360px" width="600px" loop muted autoplay="autoplay">
+		<video autoplay height="300px" width="580px" loop muted autoplay="autoplay">
 				<source src="./video/${search_name||null}.webm" type="video/webm">
 			</video>
 		`
@@ -305,7 +373,7 @@
 								${(item.desc1)?`<li>${item.desc1}</li>`:null}
 								${(item.desc2)?`<li>${item.desc2}</li>`:null}
 							</ul>
-							<span>View Details</span>
+							<span style="color:rgb(110, 66, 229)">View Details</span>
 						</div>
 						<div class="img_but">
 							${(item.Image)?`<div class="d_img"><img class="pd_img" src="${item.Image}" alt=""></div>`: `<div class="d_img"><img class="pd_img" display:"none" alt=""></div>`}
@@ -348,7 +416,7 @@
 						}
 						
 						let o=await lokesh(x);
-		document.querySelector(".final_toal>span").innerHTML=`<strong>${o||""}</strong>`;
+						document.querySelector(".final_toal>span").innerHTML=`<strong>${(o)? `₹${o}`:``}</strong>`;
 					}
 					else{
 						d.innerText=Number(d.innerText)-1;
@@ -364,7 +432,7 @@
 						x[search_name]=ty;
 						localStorage.setItem("cart_products",JSON.stringify(x));
 						let o=await lokesh(x);
-		document.querySelector(".final_toal>span").innerHTML=`<strong>${o||""}</strong>`;
+						document.querySelector(".final_toal>span").innerHTML=`<strong>${(o)? `₹${o}`:``}</strong>`;
 					}	
 				})
 				e.path[1].children[2].style.visibility="visible";
@@ -382,18 +450,18 @@
 					x[search_name]=ty;
 					localStorage.setItem("cart_products",JSON.stringify(x));
 					let o=await lokesh(x);
-		document.querySelector(".final_toal>span").innerHTML=`<strong>${o||""}</strong>`;
+					document.querySelector(".final_toal>span").innerHTML=`<strong>${(o)? `₹${o}`:``}</strong>`;
 				});
 				// console.log(e.path[1].children[0])
 				// console.log(e.path[1].children[2]);//.style.visibility="visible";document.querySelector(".addtocart_div span")
 					(!x[search_name]) ? x[search_name]=[`${i.dataset.id}-${1}`]:x[search_name].push(`${i.dataset.id}-${1}`);
 				localStorage.setItem("cart_products",JSON.stringify(x));
 				let o=await lokesh(x);
-		document.querySelector(".final_toal>span").innerHTML=`<strong>${o||""}</strong>`;
+				document.querySelector(".final_toal>span").innerHTML=`<strong>${(o)? `₹${o}`:``}</strong>`;
 			})
 		}
 		let o=await lokesh(x);
-		document.querySelector(".final_toal>span").innerHTML=`<strong>${o||""}</strong>`;
+		document.querySelector(".final_toal>span").innerHTML=`<strong>${(o)? `₹${o}`:``}</strong>`;
 		console.log(o);
 	}
 	
