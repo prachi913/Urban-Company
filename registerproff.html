@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .transform-box{ 
+            border: 3px solid black;
+            background-color: blanchedalmond;
+            height: 2vh;
+            position: relative;
+            animation-name: uma;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+           
+        }
+
+       
+      .box-my{
+        border: 3px solid red;
+        height: 80vh;
+        background-color: aqua;
+        /* position: fixed; */
+        position: absolute;
+        top: -30vh;
+        width: 100%;
+        animation-name: uma;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes uma {
+            form{
+               top: -800vh;
+            }
+            to{
+                top: 1vh;
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- <div class="transform-box">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quod facilis aperiam, totam in error magni ipsa dignissimos libero porro fugit explicabo ratione distinctio quas earum, maiores nostrum accusamus nulla.</p>
+   </div> -->
+
+   <div class="box-my">
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+<p class="mybox-para" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+
+   </div>
+   <script src="resgis.js"></script>
+</body>
+</html>

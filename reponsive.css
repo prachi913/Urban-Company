@@ -1,0 +1,50 @@
+@media all and (min-width:320px) and (max-width:750px){
+   /* 330--------website is fexible---------330 */
+    .box{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .box-2{
+        width: 100%;
+    }
+    .box1{
+        width: 100%;
+    }
+    .Both-box{
+        width: 100%;
+    }
+    .chota-box{
+        width: 70%;
+        top: -40px
+       
+    }
+    .inside-chota-box> img{
+        width:30%;
+    }
+    .chota-box-two{
+        width: 70%;
+    }
+ }
+ .wrapper .carousel{
+    width: calc(100/2);
+ }
+
+
+ @media all and (max-with:400){
+#nav{
+    align-items: center;
+    margin: auto
+}
+}
+
+@media all and (max-width:900px){
+    .carousel img{
+        width: calc(100% /2);
+    }
+}
+
+@media all and (max-width:550px){
+    .carousel img{
+        width: 100%;
+    }
+}
