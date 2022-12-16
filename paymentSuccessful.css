@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+  background-color: rgb(66, 112, 240);
+}
+
+.dwip_payment_div {
+  width: 25%;
+  height: 50%;
+  background-color: white;
+  margin: auto;
+  margin-top: 10%;
+  background: linear-gradient(rgb(220, 220, 220), rgb(182, 247, 61));
+
+display: grid;
+justify-content: center;
+align-items: center;
+text-align: center;
+grid-template-columns: 1fr;
+
+border-radius: 20px;
+/* gap: 20px; */
+
+}
+
+.dwip_tick
+{
+    margin-top: 35px;
+    margin-bottom: -50px;
+}
+
+.dwip_tick i {
+  font-size: 130px;
+  background: linear-gradient(rgb(99, 212, 24), rgb(66, 228, 26));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+    
+}
