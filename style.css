@@ -4,7 +4,7 @@
 }
 
 .banner{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 80vh;
     width: 100%;
     background-size: cover;
@@ -19,7 +19,7 @@ font-size:48px ;
     font-size: small;
 }
 .navbar{
-    border: 1px solid rgb(9, 100, 60);
+    /* border: 1px solid rgb(9, 100, 60); */
     width: 85%;
     margin: auto;
     padding:35px 0 ;
@@ -91,7 +91,7 @@ font-size:48px ;
 .searching{
     display: flex;
     width: 60%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-items: center;
     margin: auto;
 }
@@ -151,14 +151,14 @@ select{
    width: 30%;
    margin: auto;
    align-items: center;
-   border: 1px solid red;
+   /* border: 1px solid red; */
   padding: 20px 0px 20px 0px;
   text-decoration: underline;
   justify-content: space-between;
   /* margin-left: 544px; */
 }
 .box{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 100%;
     height: auto;
     display: flex;
@@ -176,11 +176,12 @@ width: 70%;
 /* background-color: blue; */
 }
 .Both-box{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     height: auto;
     display: flex;
     margin: auto;
     width: 60%;
+    padding: 10px;
 }
 .empty-box{
     /* width: 10%; */
@@ -234,7 +235,8 @@ width: 70%;
     padding: 20px 20px;
     display: flex;
     background-color: rgb(255, 255, 255);
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     margin: auto;
     align-items: center;
     text-align: center;
@@ -242,15 +244,29 @@ width: 70%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     /* border: 1px solid red; */
 }
+.inside-chota-box-two:nth-child(1){
+    padding: 22px 15px;
+}
+.inside-chota-box-two:nth-child(2){
+    padding: 17px 10px;
+}
+.inside-chota-box-two:nth-child(3){
+    padding: 17px 10px;
+}
+.inside-chota-box-two{
+    /* border: 1px solid red; */
+    /* margin: 15px 20px; */
+    padding: 10px 10px;
+}
 .inside-chota-box-two:hover{
     background-color: rgb(242, 242, 242);
 }
 .inside-chota-box-two>img{
     width: 30%;  
-    margin: 20px;
+    /* margin: 10px; */
 }
 .inside-chota-box-two>p{
-    margin: 0 20px 20px 20px;
+    margin: 25px 20px 10px 25px ;
 }
 .color-hr{
     /* border: 2px solid red; */
@@ -412,4 +428,92 @@ width: 70%;
     display: flex;
     align-items: center;
    
+}
+#sidebar{
+   
+    display: flex;
+    /* align-items:center; */
+    position: fixed;
+    top: 50px;
+    left:-300px;
+    margin: 5px;
+    width: 250px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: 1s;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+#sidebar li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Fjalla One', sans-serif;
+    width: 100%;
+    font-size: large;
+    text-align: center;
+    /* border: 1px solid red; */
+    margin: 40px 0px;
+    line-height: 50px;
+    background-color: antiquewhite;
+    background-color: rgba(248, 248, 248, 0.776);
+    display: block;
+   
+}
+#sidebar li{
+    list-style: none;
+}
+
+#sidebar li:hover{
+    background-color: #e1e0e0cb;
+    
+}
+#sidebar.active{
+    left:0;
+}
+
+/* sidebarTwo */
+#sidebarTwo{
+   
+    display: flex;
+    /* align-items:center; */
+    position: fixed;
+    top: 50px;
+    left:-300px;
+    margin: 5px;
+    width: 250px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: 1s;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+#sidebarTwo li a{
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    font-size: large;
+    text-align: center;
+    /* border: 1px solid red; */
+    font-family: 'Fjalla One', sans-serif;
+    margin: 40px 0px;
+    line-height: 50px;
+    background-color: antiquewhite;
+    background-color: rgba(248, 248, 248, 0.776);
+    display: block;
+   
+}
+#sidebarTwo li{
+    list-style: none;
+}
+
+#sidebarTwo li:hover{
+    background-color: #e1e0e0cb;
+    
+}
+#sidebarTwo.active{
+    left:0;
 }
