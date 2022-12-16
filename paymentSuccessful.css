@@ -39,3 +39,11 @@ border-radius: 20px;
   -webkit-background-clip: text;
     
 }
+
+
+.dwip_tick k{
+background-color: white;
+align-items: center; 
+font-weight: bold;
+font-size: 20px;
+}
