@@ -2,8 +2,8 @@
 
 	// })
 	
-	//let search_name="Home_Painters";
-	let search_name=sessionStorage.getItem("abc");
+	let search_name="Sofa_Cleaning";
+	//let search_name=sessionStorage.getItem("abc");
 	async function lok(){
 		let res=await fetch(`http://localhost:3000/${search_name}`);
 		let dat=await res.json();
@@ -148,3 +148,6 @@
 		
 		
 	}
+    document.querySelector(".atc").addEventListener("click",()=>{
+        window.location.href="./summary.html";
+    })
