@@ -3,15 +3,19 @@ body{
  text-rendering: optimizeLegibility;
  font-family: axiforma-regular,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-
+body.bodddy{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 div {
     display: block;
 }
-.HomePageDesktop__root--3vTPR{
-margin-top: 60px;
+/* .HomePageDesktop__root--3vTPR{
+
     background-color: #f0f0f0;
+   
   
-}
+} */
 #navbar_div{
   height: 60px;
   width: 100%;
@@ -182,7 +186,7 @@ overflow-y: scroll;
     margin-bottom: 16px;
 }
 #midlast_divv{
-    border: 1px solid red;
+   
    height: 400px;
     width: 100%;
   
@@ -198,6 +202,7 @@ overflow-y: scroll;
     height: 60%;
     width: 100%;
     margin: auto;
+    margin-left: 80px;
 
 }
 #midlast_divv>#nowthis_div>#firt_div_of_midlast{
@@ -242,14 +247,19 @@ object-fit: cover
     height: 100%;
 
 }
-
+.WhyUrbanCompany__heading--2iWeA {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #000;
+}
 
 
  #midlast_divv>#firt_div_of_midlast_mid{
 
     height: 100%;
     width: 50%;
-    border: 2px solid red;
+   
     background-color: #000; 
      z-index: 9;
     margin-top: 1000px;
@@ -312,15 +322,18 @@ h3 {
 }
 
 .WhyUrbanCompany__heading--2iWeA {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.5;
     color: #000;
+ 
 }
 .WhyUrbanCompany__desc--1ZAQV {
     font-size: 14px;
     line-height: 1.43;
     color: #757575;
+    margin: 0;
+    margin-top: -40px;
 }
 #finaly_fistabo{
     /* border: 1px solid red; */
@@ -362,7 +375,7 @@ h3 {
     line-height: 24px;
     width: 100%;
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / 8%);
-    border: 1px solid #e2e2e2;
+   
     background-color: #fff;
 }
 .AppDownloadSmsEmail__countryCode--1dgRE {
@@ -378,7 +391,7 @@ h3 {
     margin-right: 5px;
 }
 .AppDownloadSmsEmail__inpDiv--1N0Uc .AppDownloadSmsEmail__inpSms--23iHf {
-    border-left: 1px solid #e2e2e2;
+    
 }
 
 .AppDownloadSmsEmail__appLinkCTA--FFDEP {
@@ -466,26 +479,426 @@ p {
     margin-inline-end: 0px;
 }
  footer{
-    height: 650px;
-    width: 100%;
+   
     position: absolute;
-    margin-top: 1800px;
+    bottom: 1;
+    left: 0;
+    right: 0;
+    /* padding-left: 50px; */
+    top: 1700px;
     background-color: #000;
     color: white;
+    background: #000;
+    z-index: 3;
+ 
+   
+    /* padding-left: 70px;
+  padding-right: 10px; */
+ 
+ }
+ #nmkoiu{
+  height: auto;
+    width: 100%;
+   position: absolute;
+   left: 0;
+   right: 0%;
+   background-color: #000;
+  
+   color: white;
+  
+   margin-left: -8px;
+  padding-right: 15px;
+ 
    
  }
 #footerjust{
     display: flex;
-    height: 200px;
+    height: 55px;
     width: 100%;
-    display: grid;
-    grid-template-rows: 200px;
+   display: grid;
+   margin-top: 10px;
+   padding: 24px 0 8px;
+   font-size: 14px;
+   display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  
+   
 
 }
-li{
+
+#footerjust>div{
+    display: flex;
+    
+   
+}
+#footerjust>div>li{
+    list-style-type: none;
+    margin-right: 28px;
+    margin-bottom: 16px;
+    opacity: .8;
+    transition: opacity .2s;
+
+}
+.Footer__basicRow2--VQfQE{
+   
+    border-top: 1px solid #424242;
+    width: auto;
+
+}
+.Footer__basicRow2--VQfQE>p{
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.Footer__basicRow2--VQfQE  {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column!important;
+    align-items: flex-start!important;
+
+}
+
+.Footer__basicRow2--VQfQE div>li {
+    margin-right: 32px;
+    font-size: 14px;
+    line-height: 36px;
+    opacity: .8;
+    transition: opacity .2s;
+    
+
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    text-decoration: none;
+}
+div>li{
+    list-style: none;
+   
+}
+.Footer__countryName--3Czg4 {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+.Footer__basicRow2--VQfQE ul>li a {
+    color: #fff;
+}
+.pppoooppppp{
+    display: grid;
+  
+  
+}
+.lllll{
+    display: flex;
+}
+.lastpiccccc{
+    height: 20px;
+    width: 20px;
+    margin: auto
+
+}
+#onlonlylogo{
+    display: flex;
+    height: 70px;
+    width: 20%;
+   
+    align-items: center;
+    margin-right: 16px;
+    opacity: .8;
+    transition: opacity .2s;
+    margin-left: 50px;
+}
+.lastpiccccc>img{
+    width: 100%;
+    overflow: hidden;
+}
+#lasttimethisimamusing{
+    height: 100%;
+
+width: 200px;
+margin-right:0px;
+margin-top: 20px;
+margin-left: -19px;
+
+}
+#lasttimethisimamusing>img{
+    overflow: hidden;
+    width: 100%;
+}
+.Footer__basicRow3--21exW{
+    margin-top: 14px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin-left: 70px;
+   
+}
+    .Footer__companyName--1bFdA {
+        color: #fff;
+       margin-left: -40px;
+        font-size: 12px;
+        opacity: .8;
+        transition: opacity .2s;
+    }
+   
+  
+
+
+.Footer__brandWrapper--2WL5E{
+  
+    display: flex;
+    height: 70px;
+    width: 35%;
+  
+  
+    overflow: hidden;
+    
+    align-items: center;
+   
+
+}
+#appLinks--1ZZGc{
+  
+    height: 70px;
+    width: auto;
+    margin-top: 0px;
+    margin-left:  115px;
+    align-items: center;
+}
+#loginmomi{
+    display: block;
+  
+    width: 400px;
+    position: absolute;
+    z-index: 6;
+    visibility: visible;
+    opacity: 1;
+   position: fixed;
+   right: 0px;
+   width: 400px;
+   background-color: rgb(255, 255, 255);
+   height: 100%;
+     cursor: pointer;
+     overflow:-moz-hidden-unscrollable;
+   
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    
+
+}
+#kikikiki{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(18, 15, 15); /* Fallback color */
+    background-color: rgba(12, 10, 10, 0.648); /* Black w/ opacity */
+   
+}
+.animate {
+    -webkit-animation: animatezoom 0.2s;
+    animation: animatezoom 0.2s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  
+    #kikikiki.logoinopen{
+opacity: 1;
+visibility: visible;
+max-width: 100%;
+
+display: block;
+
+}
+#xxxxyx{
+    display: flex;
+    width: 20px;
+    align-items: center;
+   
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 26px;
+   height: 100%;
+  
+   
+   color: #212121;
+
+}
+.AuthScreen__title--2xr1u {
+    line-height: 24px;
+    font-size: 18px;
+    color: #212121;
+    font-weight: 500;
+    margin-left: 16px;
+    position: relative;
+    top: 1px;
+    flex: 1;
+}
+.logologinlogin{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+   
+    margin-top: 4px;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+   
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.InputPhone__countryRoot--2qnoD{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    border-right:  1px solid gainsboro;
+   
+   align-items: center;
+
+   
+    /* margin-left: 10px; */
+
+}
+.InputPhone__countryRoot--2qnoD>img{
+    overflow: hidden;
+    width: 100%;
+}
+#loginsliding{
+    display: block;
+    display: grid;
+   
+    position: absolute;
+    /* top:70px;
+   right:  9%; */
+   
+   /* text-align: left; */
+   width:100px;
+    background: #fff;
+   
+    font-family: Inter,Roboto,sans-serif,Helvetica;
+    font-weight: 400;
+   margin-top: 10px;
+   width: auto;
+     /* padding: 10px 1px;  */
+    max-height: 0px; 
+      overflow: hidden; 
+     transition: max-hight 0.5s;
+      box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; 
+   }
+#loginsliding.logindddd{
+max-height:400px;
+
+}
+.logologinloginjjjj{
+    height: 30px;
+    width: 85%;
+    display: flex;
+   position: relative;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+    border: 1px solid gainsboro;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+   
+}
+/* #chlosidehere{
+    /* border: 0!important; */
+    /* border-right: 1px solid #e2e2e2;
+    cursor: pointer;
+   height: 100%;
+    box-sizing: border-box;
+    color: #212121;
+    display: flex; */
+   
+    /* border: 1px solid rgb(98, 55, 55); */
+    /* margin-left: 10px; */
+   
+  /* */ 
+.InputPhone__inputRootClass--2e6xN {
+    border: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    flex: 1;
+}
+.b_e8d2 {
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .1s;
+    flex: 1;
+    padding: 20px 20px 20px 20px;
+    display: block;
+    width: 100%;
+    border: none;
     
 }
-/* #onlyfor_index{
-    z-index: 4;
+
+.AuthScreen__buttonRootClass--1q_xR {
+    height: 48px;
+    width: 85%;
+    background-color: #212121;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 24px;
+    min-height: 48px;
     
-} */
+}
+.Auth__authWrapper--1UpSo button {
+    position: relative;
+}
+.b_q271 {
+   
+   
+   margin-left: 30px;
+ 
+}
+
+.b_e271 {
+   
+    cursor: pointer;
+    overflow: hidden;
+    background-position: 50%;
+    transition: background .3s;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+}
+.InputPhone__inputClass--17CTM {
+    border: none;
+    color: #212121;
+    padding-left: 12px;
+    font-size: 16px;
+    overflow: visible;
+    height: 100%;
+    /* margin-left: 10px; */
+   
+}
+button, select {
+    text-transform: none;
+}
+.InputPhone__countryRoot--2qnoD>span{
+    display: flex;
+}
