@@ -219,3 +219,41 @@ function nextPayment()
 
 
 
+
+// plus membership add or remove//////////////////
+let count = 0;
+function removebtn()
+{
+
+    let text = document.querySelector(".dwip_change_text")
+   
+    count++
+    if(count % 2 == 1)
+    {
+        text.innerText = "Add"
+        // document.querySelector(".dwip_tip_price").innerText = 150
+        let endTotal = document.querySelector(".dwip_all_total_number")
+        let tip = document.querySelector(".dwip_tip_price").innerText
+        let conv = document.querySelector(".dwip_fee").innerText
+        let plus = document.querySelector(".dwip_membership_fee")
+        plus.innerText = 0
+        endTotal.innerText = Number(totalPrice) + Number(tip) + Number(conv) + Number(plus.innerText)
+        localStorage.setItem("endTotal", JSON.stringify(endTotal.innerText))
+
+        endTotal.innerText = "₹" + " " + endTotal.innerText
+    }
+    else
+    {
+        text.innerText  = "Remove"
+        let endTotal = document.querySelector(".dwip_all_total_number")
+        let tip = document.querySelector(".dwip_tip_price").innerText
+        let conv = document.querySelector(".dwip_fee").innerText
+        let plus = document.querySelector(".dwip_membership_fee")
+        plus.innerText = 299
+        endTotal.innerText = Number(totalPrice) + Number(tip) + Number(conv) + Number(plus.innerText)
+        localStorage.setItem("endTotal", JSON.stringify(endTotal.innerText))
+
+        endTotal.innerText = "₹" + " " + endTotal.innerText
+    }
+
+}
