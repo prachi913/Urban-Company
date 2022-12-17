@@ -5,7 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="C:\Users\Dell\Desktop\wholesale-territory-1714\booking_page_styles.css">
+    <link rel="stylesheet" href="./booking_page_styles.css">
+    <style>
+        ::-webkit-scrollbar{
+            display:none;
+        }
+        #super{
+            /* visibility:hidden; */
+            width:50%;
+            height:300px;
+            overflow: scroll;
+            /* border: 1px solid red; */
+            margin:auto;
+            /* display: flex;
+            flex-direction: column; */
+        }
+        #super>div>img{
+          width:68px;
+        }
+        #super>div{
+            width:70%;
+            border: 1px solid black;
+            display:flex;
+            margin:6px auto;
+            padding:10px;
+            border-radius: 6px;
+            background-color: antiquewhite;
+        }
+        #super>div *{
+            background-color: antiquewhite;
+        }
+        .dj{
+            width:250px;
+            margin:0px 40px 0px 20px;
+        }
+        .sup_gre{
+            display:flex;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,11 +50,11 @@
 
     <nav>
         <div class="logo">
-            <img style="width: 10%; height:100% ;position: absolute;"  src="C:\Users\Dell\Desktop\wholesale-territory-1714\logologo.jpg">
+            <img style="width: 10%; height:100% ;position: absolute;"  src="./logologo.jpg">
         </div>
 
         <ul>
-            <li><a href="C:\Users\Dell\Desktop\wholesale-territory-1714\blog_page.html">Blog</a></li>
+            <li><a href="./blog_page.html">Blog</a></li>
             <li><a href="#">Register As A Professional</a></li>
             <li><a href="#">My Bookings</a></li>
             <li><a href="#">Help Center</a></li>
@@ -26,9 +63,6 @@
     </nav>
 
     <div id="main">
-
-
-   
         <div class="heading">
             <p>My Bookings</p>
         </div>
@@ -37,11 +71,16 @@
             <button class="b1" type="text">ON GOING</button>
             <button class="b2" type="text">HISTORY</button>
         </div>
-
+        <div class="sup_gre">
+            <div id="super">
+            </div>
+            <!-- <div id="great">
+            </div> -->
+        </div>
         <div id="bookings_data">
            <div>
             <h2>Trim&Style</h2>
-            <img src="C:\Users\Dell\Desktop\wholesale-territory-1714\sampleimages\download.jpg">
+            <img src="./sampleimages\download.jpg">
             <p>ratings:<div>50</div></p>
             <p>price:<div>50</div></p>
            </div>
@@ -49,7 +88,7 @@
 
            <div>
             <h2>Hair color</h2>
-            <img src="C:\Users\Dell\Desktop\wholesale-territory-1714\sampleimages\download (1).jpg">
+            <img src="./sampleimages\download (1).jpg">
             <p>ratings:<div>50</div></p>
             <p>price:<div>50</div></p>
         </div>
@@ -57,7 +96,7 @@
 
         <div>
             <h2>Trim&Style</h2>
-            <img src="C:\Users\Dell\Desktop\wholesale-territory-1714\sampleimages\download (2).jpg">
+            <img src="./sampleimages\download (2).jpg">
             <p>ratings:<div>50</div></p>
             <p>price:<div>50</div></p>
            </div>
@@ -65,16 +104,7 @@
 
            <div>
             <h2>Trim&Style</h2>
-            <img src="C:\Users\Dell\Desktop\wholesale-territory-1714\sampleimages\download (3).jpg">
-            <p>ratings:<div>50</div></p>
-            <p>price:<div>50</div></p>
-           </div>
-
-
-           
-           <div>
-            <h2>Trim&Style</h2>
-            <img src="C:\Users\Dell\Desktop\wholesale-territory-1714\sampleimages\h2.jpg">
+            <img src="./sampleimages\download (3).jpg">
             <p>ratings:<div>50</div></p>
             <p>price:<div>50</div></p>
            </div>
@@ -83,7 +113,16 @@
            
            <div>
             <h2>Trim&Style</h2>
-            <img src="C:\Users\Dell\Desktop\wholesale-territory-1714\sampleimages\h1.jpg">
+            <img src="./sampleimages\h2.jpg">
+            <p>ratings:<div>50</div></p>
+            <p>price:<div>50</div></p>
+           </div>
+
+
+           
+           <div>
+            <h2>Trim&Style</h2>
+            <img src="./sampleimages\h1.jpg">
             <p>ratings:<div>50</div></p>
             <p>price:<div>50</div></p>
            </div>
@@ -96,8 +135,6 @@
             <button  type="text">BOOK A SERVICE</button>
         </div>
 
-
-
     </div>
     
 
@@ -105,3 +142,53 @@
 
 </body>
 </html>
+<script>
+    window.addEventListener("load",async()=>{
+        let x=JSON.parse(localStorage.getItem("final_products"));
+    var newarr=[];
+    for(let j in x){
+        for(let i=0;i<x[j].length;i++){
+            let g=x[j][i].split("-")[0];
+            let k=x[j][i].split("-")[1];
+            let d=await fet(j,g,k);
+            newarr.push(d);
+        }
+    }
+    async function fet(j,g,k){
+        let res=await fetch(`http://localhost:3000/${j}/${g}`)
+        let data=await res.json();
+       return `<div><img src="${data.Image}"/><div class="dj"><P>${data.Title}</P><span>Qty:${k}</span></div><h3>${data.price}</h3></div>`
+    }
+    let o=JSON.parse(localStorage.getItem("history_products"));
+    var harr=[];
+    for(let one in o){
+        for(let i=0;i<o[one].length;i++){
+           
+            let git=o[one][i].split("-")[0];
+            let kit=o[one][i].split("-")[1];
+            let d=await feto(one,git,kit);
+            harr.push(d);
+        }
+    }
+    async function feto(one,git,kit){
+        let res=await fetch(`http://localhost:3000/${one}/${git}`)
+        let data=await res.json();
+       return `<div><img src="${data.Image}"/><div class="dj"><P>${data.Title}</P><span>Qty:${kit}</span></div><span>review</span></div>`
+    }
+
+    document.querySelector(".b2").addEventListener("click",()=>{
+        //document.querySelector("#super").style.visibility="visible";
+        document.querySelector("#super").innerHTML=harr.join("");
+    })
+    document.querySelector(".b1").addEventListener("click",()=>{
+        //document.querySelector("#super").style.visibility="visible";
+        document.querySelector("#super").innerHTML=newarr.join("");
+    })
+    })
+
+    
+    
+    /////
+   
+    
+</script>
