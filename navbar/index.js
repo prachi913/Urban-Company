@@ -7,15 +7,28 @@ let dropcityid_dropdown_container=document.getElementById("dropcityid_dropdown-c
 function funfun(){
  dropcityid_dropdown_container.classList.toggle("container")
 }
-// var i;
-// for (i = 0; i <dropcityid.length; i++) {
-//     dropcityid[i].addEventListener("click", function() {
-//         this.classList.toggle("dropcityid_dropdown-container");
-//     let dropdownContent=this.nextElementSibling;
-//     if (dropdownContent.style.display === "block") {
-//       dropdownContent.style.display = "none";
-//     } else {
-//       dropdownContent.style.display = "block";
-//     }
-//   });
-// }
+let chlosidehere=document.getElementById("chlosidehere")
+chlosidehere.onclick=function(){
+    gungun()
+}
+let loginsliding=document.getElementById("loginsliding")
+function gungun(){
+    loginsliding.classList.toggle("logindddd")
+}
+let login1=document.getElementById("login1")
+login1.onclick=function(){
+    login1open()
+}
+let kikikiki=document.getElementById("kikikiki")
+let boodyyy=document.querySelector("body")
+function login1open(){
+    kikikiki.classList.toggle("logoinopen")
+boodyyy.classList.toggle("bodddy")
+}
+let xxxxyx=document.getElementById("xxxxyx")
+xxxxyx.onclick=function(){
+    
+    kikikiki.style.display="none"
+    boodyyy.style.overflow="visible"
+    location.reload();
+}
