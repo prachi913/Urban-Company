@@ -49,6 +49,7 @@ function ad(){
     else{
         localStorage.setItem("service_company_user",document.querySelector(".logologinloginjjjj").children[1].children[0].value)
         window.location.reload();
+
     }
 }
 

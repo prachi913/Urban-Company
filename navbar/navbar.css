@@ -51,7 +51,7 @@ margin-left: 0%;
 #navbar_div>#navbar_div_last{
     display: flex;
     height: 100%;
-    width: 400px;
+    width: 600px;
     margin-right: 25px;
     align-items: center;
     font-weight: 550;
@@ -60,6 +60,9 @@ margin-left: 0%;
 }
 #navbar_div>#navbar_div_last>:nth-child(2){
     border-bottom: 2px solid #fff;
+}
+.hid{
+    /* display:none */
 }
 a {
     text-decoration: none;
