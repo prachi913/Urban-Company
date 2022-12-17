@@ -27,6 +27,53 @@
             display: flex;
             justify-content: space-between;
         }
+        ::-webkit-scrollbar{
+            display:none;
+        }
+        #super{
+            visibility:visible;
+            width:600px;
+            height:300px;
+            overflow: scroll;
+            /* border: 1px solid red; */
+            margin:auto;
+            /* display: flex;
+            flex-direction: column; */
+        }
+        #super>div>img{
+          width:48px;
+          height:48px;
+        }
+        #super>div{
+            width:70%;
+            height:50px; 
+            border: 1px solid black;
+            display:flex;
+            margin:6px auto;
+            padding:6px;
+            border-radius: 6px;
+            background-color: rgb(238, 250, 215);
+        }
+        #super>div *{
+            background-color: rgb(238, 250, 215);
+        }
+        .dj{
+            width:250px;
+             margin-left: 30px; 
+        }
+        .dj>*{
+            margin:0px;
+            padding:0px;
+        }
+        #super>div>button{
+           color: rgb(110, 66, 229); 
+           padding:0px;
+           margin:0px;
+           border-radius: 8px;
+        }
+        #buttons{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -55,6 +102,17 @@
                     <button id="ad">Add it</button>
                     <button id="up">Update</button>
                 </form>
+                <div>
+                    <div id="buttons">
+                        <button class="b1" type="text">ON GOING</button>
+                    </div>
+                    <div id="super">
+                    </div>
+                    <div id="great">
+
+                    </div>
+                </div>
+                
                 <form id="fy" action="">
                     <h2>Delete Species</h2>
                     <input type="text" name="Title" placeholder="Title">
@@ -70,7 +128,10 @@
 </body>
 </html>
 <script>
-   
+//     localStorage.setItem("final_products",JSON.stringify({
+// "Home_Painters":["1-2",],
+// "Electrician":["2-3","3-5"]
+// }))
     window.addEventListener("load",async ()=>{
         let rest=await fetch(`http://localhost:3000/db`);
         let dft=await rest.json();
@@ -81,8 +142,68 @@
         let dgf=document.querySelectorAll(".cat");
         dgf[0].innerHTML=`<option value="">Select category</option>`+arr.join("");
         dgf[1].innerHTML=`<option value="">Select category</option>`+arr.join("");
-    })
+
+
+        let x=JSON.parse(localStorage.getItem("final_products"));
+    let newarr=[];
+    for(let j in x){
+        for(let i=0;i<x[j].length;i++){
+            let g=x[j][i].split("-")[0];
+            let k=x[j][i].split("-")[1];
+            let d=await fet(j,g,k);
+            newarr.push(d);
+        }
+    }
+    let his=JSON.parse(localStorage.getItem("history_products"))||{};
+    //console.log(newarr["0"]);
+    document.querySelector("#super").innerHTML=newarr.join("");
+    let ji=document.querySelectorAll(".dfg");
+    for(let lo of ji){
+        lo.addEventListener("click",()=>{
+            console.log(lo.dataset.id);
+            console.log(lo.name);
+            for(let itm=0;itm<x[lo.name].length;itm++){
+                if(x[lo.name][itm].split("-")[0]==lo.dataset.id){
+                    let com=x[lo.name].splice(itm,1);
+                   ( his[lo.name])?his[lo.name].push(...com):his[lo.name]=com;
+                   localStorage.setItem("history_products",JSON.stringify(his));
+
+                }  
+            }
+            if(x[lo.name].length==0){
+                delete x[lo.name];
+            }
+            localStorage.setItem("final_products",JSON.stringify(x));
+            window.location.reload();
+        })
+    }
+   
+    async function fet(j,g,k){
+        let res=await fetch(`http://localhost:3000/${j}/${g}`)
+        let data=await res.json();
+       return `<div class="kol">
+                <img src="${data.Image}"/>
+                <div class="dj">
+                    <P>${data.Title}</P>
+                    <span>Qty:${k}</span>
+                </div>
+                <button class="dfg" name="${j}" data-id="${data.id}">End service</button>
+            </div>`
+    }
+    });
+    document.querySelector(".b1").addEventListener("click",()=>{
+        if(document.querySelector("#super").style.visibility==""||document.querySelector("#super").style.visibility=="hidden"){
+            document.querySelector("#super").style.visibility="visible";
+        }
+        else{
+            document.querySelector("#super").style.visibility="hidden"; 
+        }
+    });
     
+    // // for(let lo of cft){
+    // //     console.dir(cft[lo]);
+    // // }
+    // cft
 
     document.querySelector("#ff>#ad").addEventListener("click",(e)=>{
         e.preventDefault();
