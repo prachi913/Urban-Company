@@ -213,7 +213,7 @@ width: 70%;
     background-color: rgb(242, 242, 242);
   
 }
-.inside-chota-box> img {
+.inside-chota-box img {
     width: 20%;  
     margin: 20px;
 }
@@ -261,8 +261,9 @@ width: 70%;
 .inside-chota-box-two:hover{
     background-color: rgb(242, 242, 242);
 }
-.inside-chota-box-two>img{
+.inside-chota-box-two img{
     width: 30%;  
+    /* border: 1px solid red; */
     /* margin: 10px; */
 }
 .inside-chota-box-two>p{

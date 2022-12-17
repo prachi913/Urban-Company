@@ -54,8 +54,13 @@ Ac.onclick = function(){
  }
 
  Electrican.onclick = function(){
-    sessionStorage.setItem("Electrican",Electrican.Electrican)
-    console.log(sessionStorage.getItem("Electrican"))
+    sessionStorage.setItem("abc","Electrician")
+    console.log(sessionStorage.getItem("abc"))
+ }
+
+ HomePainting.onclick = function(){
+    sessionStorage.setItem("abc","Home_Painters")
+    console.log(sessionStorage.getItem("abc"))
  }
  
  CleaningPest.addEventListener("click",()=>{
@@ -66,20 +71,26 @@ Ac.onclick = function(){
     let DisinfectionService = document.getElementById("DisinfectionService")
     console.log(KitchenCleaning)
     KitchenCleaning.onclick = function(){
-        sessionStorage.setItem("abc","Kitchen_Cleaning")
-        console.log(sessionStorage.getItem("KitchenCleaning"))
+        sessionStorage.setItem("abc","Kitchen_Cleaning");
+        console.log("hello")
+        // window.location.href = "./lokesh.html";
+        
     }
     SofaCleaning.onclick = function(){
         sessionStorage.setItem("abc","Sofa_Cleaning")
+        window.location.assign = "lokesh.html"
     }
     BathroomCleaning.onclick = function(){
         sessionStorage.setItem("abc","Bathroom_Cleaning")
+        window.location.assign = "lokesh.html"
     }
     FullhomeCleaning.onclick = function(){
         sessionStorage.setItem("abc","Fullhome_Cleaning")
+        window.location.assign = "lokesh.html"
     }
     DisinfectionService.onclick = function(){
         sessionStorage.setItem("abc","Disinfection_Service")
+        window.location.assign = "lokesh.html"
     }
  })
 
@@ -89,18 +100,21 @@ Ac.onclick = function(){
     let Geyser = document.getElementById("Geyser")
     
     ACapplications.onclick = function(){
-        sessionStorage.setItem("abc","AC_applications")
+        sessionStorage.setItem("abc","Salon_Prime")
+        window.location.assign = "lokesh.html"
     }
     AirConditioner.onclick = function(){
         sessionStorage.setItem("abc","Air_Conditioner")
+        window.location.assign = "lokesh.html"
     }
     Geyser.onclick = function(){
         sessionStorage.setItem("abc","Geyser")
+        window.location.assign = "lokesh.html"
     }
 
  })
 
-fetch
+
 
 // Register As Proffesional
 
