@@ -75,7 +75,7 @@ body{
    display: block;
    border: none;
    background: none;
-   width: 100%;
+   width: 80%;
    text-align: left;
    cursor: pointer;
    outline: none;
@@ -88,7 +88,7 @@ body{
    
    position: absolute;
    
-   width:200px;
+   width:262px;
    background: #fff;
    
    font-family: Inter,Roboto,sans-serif,Helvetica;
@@ -98,11 +98,25 @@ body{
      overflow: hidden; 
     transition: max-hight 0.5s;
    overflow-y: scroll;
+   margin-top: 10px;
+   }
+   #dropcityid_dropdown-container>a{
+    text-decoration: none;
+    color: #000;
+   padding-left: 20px;
+    height: 37px;
+    width: 100%;
+    display: flex;
+   align-items: center;
+    }
+   #dropcityid_dropdown-container>a:hover{
+
+    background-color: #e4e1e1;
    }
    #dropcityid_dropdown-container.container{
        /* opacity:1;
        visibility: visible; */
-       max-height: 300px;
+       max-height: 230px;
        /* overflow-y: scroll; */
    
    } 
@@ -116,8 +130,10 @@ body{
       position: absolute;
       top:0%;
      
-    left: 0;
+    left: 0%;
+    right: 0%;
     margin-bottom: 20px;
+   
       
      
    
@@ -146,27 +162,21 @@ body{
    
    }
    #middiv_whole1>#middiv_whole1_lastdiv{
-       /* background-color: #262626;
-       color: white;
-       height: 100%;
-       width: 50%;
-       z-index: 3; */
+       
 
        display: inline-block;
     width: 100%;
     height: 600px;
-    background: linear-gradient(90deg,transparent,#000 40%);
+    background: linear-gradient(85deg,transparent,#000 55%);
     text-align: right;
     position: relative;
     z-index: 3;
-   
    }
    #middiv_whole1>#middiv_whole1_lastdiv>#middiv_whole1_lastdiv_short{
        height: 70%;
        width: 100%;
        align-items:flex-start;
        margin-top: 50px;
-   
    }
    #middiv_whole1_lastdiv_short_p{
        font-size: 16px;
@@ -175,13 +185,20 @@ body{
        letter-spacing: 5.33px;
        color: #bdbdbd;
        text-transform: uppercase;
+       margin-top: 100px;
+       margin-right: 350px;
    }
    #middiv_whole1_lastdiv_short_h1{
        font-size: 32px;
        font-weight: 700;
        line-height: 1.5;
        color: #fff;
-       margin: 20px 0 16px
+       margin-top: 20px;
+      
+     overflow: hidden;
+      
+
+
    }
    #middiv_whole1_lastdiv_short_pagain{
        font-size: 18px;
@@ -197,6 +214,9 @@ body{
        border-radius: 4px;
        background-color: #fff;
        padding: 15px 16px;
+       margin-left: 750px;
+       text-align: left;
+     
    }
    #interesting_div_city>p{
        color: #262626;
@@ -205,6 +225,7 @@ body{
        line-height: 1.5;
        color: #212121;
        margin-bottom: 16px;
+       margin-right: 60px;
    }
    #midlast_divv{
       
@@ -306,7 +327,7 @@ body{
        position: absolute;
        z-index: 3;
        background: #f6f7f8;
-       background-image: linear-gradient(90deg,#f6f7f8 0,#edeef1 20%,#f6f7f8 40%,#f6f7f8);
+       background-image: linear-gradient(95deg,#f6f7f8 0,#edeef1 60%,#f6f7f8 70%,#f6f7f8);
        background-repeat: no-repeat;
        background-size: 200% 100%;
        animation-duration: 1s;
