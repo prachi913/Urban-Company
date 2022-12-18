@@ -95,14 +95,9 @@ Ac.onclick = function(){
  })
 
  Ac.addEventListener("click",()=>{
-    let ACapplications = document.getElementById("AC-applications")
     let AirConditioner = document.getElementById("Air-Conditioner")
     let Geyser = document.getElementById("Geyser")
     
-    ACapplications.onclick = function(){
-        sessionStorage.setItem("abc","Salon_Prime")
-        window.location.assign = "lokesh.html"
-    }
     AirConditioner.onclick = function(){
         sessionStorage.setItem("abc","Air_Conditioner")
         window.location.assign = "lokesh.html"
@@ -133,4 +128,16 @@ Ac.onclick = function(){
 // // visibleText.addEventListener("click",{
 // //     invisi.innerHTML = ""
 // // })
+let get=document.querySelectorAll(".inside-chota-box");
+for(let i=0;i<get.length;i++){
+    get[i].addEventListener("click",()=>{
+        sessionStorage.setItem("abc",get[i].attributes.name.nodeValue);
+        window.open("./lokesh.html");
+    })
+}
+// for(let i of get){
+//    get[i].addEventListener("click",()=>{
+//    console.dir(i)
+//    })
+// }
 
