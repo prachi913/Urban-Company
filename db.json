@@ -111,17 +111,6 @@
   ],
   "Sofa_Cleaning": [
     {
-      "id": 1,
-      "Title": "Sofa cleaning",
-      "Image": "",
-      "rating": "4.82 ",
-      "review": "(69.4K)",
-      "price": "₹500",
-      "desc1": "Dry vacuuming to remove crumbs and dirt particles",
-      "desc2": "Wet shampooing & vacuuming to remove tough stains and spillages",
-      "options": "10 options"
-    },
-    {
       "id": 2,
       "Title": "Cushions cleaning (set of 5)",
       "Image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1659102400350-b59e53.png",
@@ -1282,7 +1271,7 @@
       "id": 1,
       "Title": "Deep clean AC service (window)",
       "Image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1616302301647-bb9cc7.png",
-      "price": "₹499",
+      "price": "₹1",
       "rating": "4.81 ",
       "reviews": "(339.7K)",
       "desc1": "Get 2x deeper dust removal with unique foam jet technology",
@@ -1351,16 +1340,13 @@
       "offer": ""
     },
     {
-      "id": 7,
-      "Title": "Uninstallation (window/split)",
-      "Image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_96,dpr_2,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1644498042167-558d12.png",
-      "price": "₹399  ",
-      "rating": "4.87 ",
-      "reviews": "(38.2K)",
-      "desc1": "",
-      "desc2": "",
-      "duration": "Includes uninstallation for your AC unit(s)",
-      "offer": ""
+      "rating": "(1k)",
+      "Title": "new ",
+      "price": "₹10",
+      "Image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1646814042922-25f8f1.jpeg",
+      "desc1": "axsdcfg",
+      "desc2": "sdfgh",
+      "id": 8
     }
   ],
   "Geyser": [
@@ -1473,6 +1459,15 @@
       "desc1": ";/l.km",
       "desc2": "ljkjh",
       "id": 2
+    },
+    {
+      "rating": "(1k)",
+      "Title": "new ",
+      "price": "₹852",
+      "Image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1646814042922-25f8f1.jpeg",
+      "desc1": "kjhgf",
+      "desc2": "kjhg",
+      "id": 3
     }
   ],
   "Salon_Prime": [

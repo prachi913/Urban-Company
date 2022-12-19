@@ -140,4 +140,5 @@ for(let i=0;i<get.length;i++){
 //    console.dir(i)
 //    })
 // }
-
+let usr=localStorage.getItem("service_company_user");
+document.querySelector(".kol").innerText=(usr)?`user-${usr}`:"Login /Sign Up";
